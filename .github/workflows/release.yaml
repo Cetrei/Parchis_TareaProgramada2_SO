@@ -21,9 +21,13 @@ jobs:
           zip -r parchis-source.zip . -x "obj/*" ".git/*" ".github/*"
 
       - name: Create Release
-        id: create_release
         uses: softprops/action-gh-release@v1
         with:
+          name: "Entrega Final - Proyecto 2"
+          body: |
+            Esta es la entrega del Simulador de Parchis. 
+            - parchis-source.zip: Codigo fuente (usar `make rebuild && run`).
+            - parchis: Ejecutable compilado para Linux.
           files: |
             parchis-source.zip
             parchis
