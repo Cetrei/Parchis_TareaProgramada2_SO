@@ -1,0 +1,31 @@
+name: Release Project
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Compile project
+        run: |
+          make rebuild
+
+      - name: Prepare source zip
+        run: |
+          zip -r parchis-source.zip . -x "obj/*" ".git/*" ".github/*"
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            parchis-source.zip
+            parchis
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
