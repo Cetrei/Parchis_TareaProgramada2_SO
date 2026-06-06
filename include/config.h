@@ -7,7 +7,7 @@
 #define ACTIVAR_LOGS      true
 #define PRINT_INFO        false
 #define DEBUG_MAPEO       true
-#define DELAY_TURNOS_MS   50 
+#define DELAY_TURNOS_MS   400
 
 // Constantes de reglas y puntuacion
 #define PUNTOS_POR_COMER 0
