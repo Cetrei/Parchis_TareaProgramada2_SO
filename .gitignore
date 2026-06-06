@@ -1,0 +1,13 @@
+# Binarios y objetos
+bin/
+obj/
+
+# Archivos de depuracion y logs
+debug_parchis.log
+mapeo.log
+
+# Archivos temporales de compilacion
+*.d
+
+# Ejecutable del build personalizado (si lo compilas aparte)
+build
