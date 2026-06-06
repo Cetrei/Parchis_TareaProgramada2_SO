@@ -9,5 +9,6 @@ mapeo.log
 # Archivos temporales de compilacion
 *.d
 
-# Ejecutable del build personalizado (si lo compilas aparte)
+# Ejecutable del build personalizado
 build
+parchis-source.zip
